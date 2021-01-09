@@ -4,17 +4,21 @@ import java.util.ArrayList;
 public class Flight {
 
     private ArrayList<Passenger> bookedPassengers;
-    private plane;
+    private Plane plane;
     private String flightNumber;
     private String destination;
     private String destAirport;
     private String departureTime;
+    private PlaneType planeType;
+    private ArrayList<Passenger> booked;
 
-    public Flight(String flightNumber, String destination, String destAirport, String departureTime){
+    public Flight(String flightNumber, String destination, String destAirport, String departureTime, PlaneType planeType){
         this.flightNumber = flightNumber;
         this.destination = destination;
         this.destAirport = destAirport;
         this.departureTime = departureTime;
+        this.planeType = planeType;
+        this.booked = new ArrayList<Passenger>();
     }
 
     public String getFlightNumber() {
@@ -32,4 +36,9 @@ public class Flight {
     public String getDepartureTime() {
         return this.departureTime;
     }
+
+    public PlaneType getPlaneType() {
+        return this.planeType;
+    }
+
 }

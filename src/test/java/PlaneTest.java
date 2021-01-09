@@ -1,16 +1,23 @@
 import org.junit.Before;
+import org.junit.jupiter.api.Test;
 
 import javax.print.attribute.standard.Destination;
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+
 public class PlaneTest{
-    private Plane plane;
+    Flight flight;
+    Plane plane;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         plane = new Plane(PlaneType.BOEING747_100);
     }
-
+    @Test
+    public void planeHasType(){
+        assertEquals(PlaneType.BOEING747_100, flight.getPlaneType());
+    }
 }
 
 

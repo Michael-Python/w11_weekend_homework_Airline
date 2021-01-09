@@ -6,12 +6,13 @@ import javax.print.attribute.standard.Destination;
 import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
-        private Flight flight;
-        private Plane plane;
+        Flight flight;
+        Plane plane;
 
         @Before
         public void setUp() {
-            flight = new Flight("FR4536", "Vancouver", "YVR", "20:00");
+            flight = new Flight("FR4536", "Vancouver", "YVR", "20:00", PlaneType.BOEING747_100);
+            plane = new Plane(PlaneType.BOEING747_100);
         }
 
         @Test
@@ -33,6 +34,7 @@ public class FlightTest {
         public void flightHasDeparturetime(){
                 assertEquals("20:00", flight.getDepartureTime());
         }
+
 
 
 }
