@@ -19,4 +19,20 @@ public class FlightTest {
                 assertEquals("FR4536", flight.getFlightNumber());
         }
 
+        @Test
+        public void flightHasDestination(){
+                assertEquals("Vancouver", flight.getDestination());
+        }
+
+        @Test
+        public void flightHasDestAirport(){
+                assertEquals("YVR", flight.getDestAirport());
+        }
+
+        @Test
+        public void flightHasDeparturetime(){
+                assertEquals("20:00", flight.getDepartureTime());
+        }
+
+
 }

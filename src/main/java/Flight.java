@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Flight {
 
     private ArrayList<Passenger> bookedPassengers;
-    private String plane;
+    private plane;
     private String flightNumber;
     private String destination;
     private String destAirport;
@@ -17,7 +17,19 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public Object getFlightNumber() {
+    public String getFlightNumber() {
         return this.flightNumber;
+    }
+
+    public String getDestination() {
+        return this.destination;
+    }
+
+    public String getDestAirport() {
+        return this.destAirport;
+    }
+
+    public String getDepartureTime() {
+        return this.departureTime;
     }
 }
