@@ -17,12 +17,12 @@ public class FlightTest {
         public void setUp() {
             flight = new Flight("FR4536", "Vancouver", "YVR", "20:00", PlaneType.BOEING747_100);
             plane = new Plane(PlaneType.BOEING747_100);
-            passenger1 = new Passenger("Michael", 3);
-            passenger2 = new Passenger("Kasia", 7);
-            passenger3 = new Passenger("Bill", 3);
-            passenger4 = new Passenger("Sue", 7);
-            passenger5 = new Passenger("Dan", 3);
-            passenger6 = new Passenger("Mary", 7);
+            passenger1 = new Passenger("Michael", 3, 100);
+            passenger2 = new Passenger("Kasia", 7, 100);
+            passenger3 = new Passenger("Bill", 3, 100);
+            passenger4 = new Passenger("Sue", 7, 100);
+            passenger5 = new Passenger("Dan", 3, 100);
+            passenger6 = new Passenger("Mary", 7, 100);
         }
 
         @Test
@@ -57,7 +57,7 @@ public class FlightTest {
         }
 
         @Test
-        public void cannotAddPassenger(){
+        public void cannotAddPassengerCapacity(){
                 flight.allowPassengerCheckIn(passenger2);
                 flight.allowPassengerCheckIn(passenger3);
                 flight.allowPassengerCheckIn(passenger4);
@@ -66,6 +66,4 @@ public class FlightTest {
                 assertEquals(4, flight.passengerCount());
         }
 
-//        @Test
-//        public void planeHasSeats
 }

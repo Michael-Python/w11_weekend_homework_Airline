@@ -10,8 +10,8 @@ public class PassengerTest {
 
     @Before
     public void setUp(){
-        passenger1 = new Passenger("Michael", 3);
-        passenger2 = new Passenger("Kasia", 7);
+        passenger1 = new Passenger("Michael", 3, 80.0);
+        passenger2 = new Passenger("Kasia", 7, 80.0);
     }
 
     @Test

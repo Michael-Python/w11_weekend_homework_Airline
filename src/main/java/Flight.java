@@ -18,8 +18,6 @@ public class Flight {
         this.destAirport = destAirport;
         this.departureTime = departureTime;
         this.planeType = planeType;
-        this.booked = new ArrayList<Passenger>();
-        this.newCapacity = newCapacity;
     }
 
     public String getFlightNumber() {
@@ -51,8 +49,6 @@ public class Flight {
         if(passengerCount() < PlaneType.BOEING747_100.getCapacity()) {
             this.passengerCheckIn(passenger);
             passenger.getPassengerNameByNumber();
-//            make a method in planetype enum
-//            PlaneType.BOEING747_100.capacity --;
             newCapacity = PlaneType.BOEING747_100.getCapacity() - passengerCount();
             System.out.println("On flight "+this.flightNumber+", capacity is now "+ newCapacity);
         } else {
@@ -60,4 +56,5 @@ public class Flight {
             this.booked.size();
         }
     }
+
 }
