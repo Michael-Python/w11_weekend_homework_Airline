@@ -18,8 +18,6 @@ public class Flight {
         this.destAirport = destAirport;
         this.departureTime = departureTime;
         this.planeType = planeType;
-        this.booked = new ArrayList<Passenger>();
-        this.newCapacity = newCapacity;
     }
 
     public String getFlightNumber() {
@@ -58,4 +56,5 @@ public class Flight {
             this.booked.size();
         }
     }
+
 }
