@@ -51,8 +51,6 @@ public class Flight {
         if(passengerCount() < PlaneType.BOEING747_100.getCapacity()) {
             this.passengerCheckIn(passenger);
             passenger.getPassengerNameByNumber();
-//            make a method in planetype enum
-//            PlaneType.BOEING747_100.capacity --;
             newCapacity = PlaneType.BOEING747_100.getCapacity() - passengerCount();
             System.out.println("On flight "+this.flightNumber+", capacity is now "+ newCapacity);
         } else {

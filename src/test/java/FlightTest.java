@@ -66,6 +66,4 @@ public class FlightTest {
                 assertEquals(4, flight.passengerCount());
         }
 
-//        @Test
-//        public void planeHasSeats
 }
