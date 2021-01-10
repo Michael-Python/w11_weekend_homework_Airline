@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class Flight {
 
-    private ArrayList<Passenger> bookedPassengers;
     private Plane plane;
     private String flightNumber;
     private String destination;
@@ -18,6 +17,8 @@ public class Flight {
         this.destAirport = destAirport;
         this.departureTime = departureTime;
         this.planeType = planeType;
+        this.booked = new ArrayList<Passenger>();
+        this.newCapacity = newCapacity;
     }
 
     public String getFlightNumber() {
