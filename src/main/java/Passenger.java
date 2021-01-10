@@ -14,4 +14,8 @@ public class Passenger {
     public int getBagNumber() {
         return this.numberOfBags;
     }
+
+    public void getPassengerNameByNumber(){
+        System.out.println(this.name + " was checked in");
+    }
 }

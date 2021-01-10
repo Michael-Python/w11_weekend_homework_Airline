@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.Destination;
 import java.util.ArrayList;
 
 public class Flight {
@@ -11,6 +10,7 @@ public class Flight {
     private String departureTime;
     private PlaneType planeType;
     private ArrayList<Passenger> booked;
+    private int newCapacity;
 
     public Flight(String flightNumber, String destination, String destAirport, String departureTime, PlaneType planeType){
         this.flightNumber = flightNumber;
@@ -19,6 +19,7 @@ public class Flight {
         this.departureTime = departureTime;
         this.planeType = planeType;
         this.booked = new ArrayList<Passenger>();
+        this.newCapacity = newCapacity;
     }
 
     public String getFlightNumber() {
@@ -37,8 +38,26 @@ public class Flight {
         return this.departureTime;
     }
 
-    public PlaneType getPlaneType() {
-        return this.planeType;
+
+    public int passengerCount() {
+        return this.booked.size();
     }
 
+    public void passengerCheckIn(Passenger passenger){
+        this.booked.add(passenger);
+    }
+
+    public void allowPassengerCheckIn(Passenger passenger) {
+        if(passengerCount() < PlaneType.BOEING747_100.getCapacity()) {
+            this.passengerCheckIn(passenger);
+            passenger.getPassengerNameByNumber();
+//            make a method in planetype enum
+//            PlaneType.BOEING747_100.capacity --;
+            newCapacity = PlaneType.BOEING747_100.getCapacity() - passengerCount();
+            System.out.println("On flight "+this.flightNumber+", capacity is now "+ newCapacity);
+        } else {
+            System.out.println(passenger.getName() + " was not checked in.");
+            this.booked.size();
+        }
+    }
 }
